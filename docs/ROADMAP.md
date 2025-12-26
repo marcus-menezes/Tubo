@@ -13,9 +13,10 @@ Planejamento de desenvolvimento e entrega do MVP
 - [x] Storage: **AWS S3** para imagens/vídeos
 - [x] Gerenciador de Pacotes: **Bun**
 - [x] CI/CD: **GitHub Actions**
+- [x] Documentação API: **Swagger + Scalar**
+- [x] Autenticação: **JWT próprio** (NestJS Passport)
 
 **⏳ Pendentes:**
-- [ ] Definir estratégia de autenticação (JWT, OAuth, AWS Cognito)
 - [ ] Escolher ORM (TypeORM, Prisma, Drizzle)
 - [ ] Definir estratégia de deploy (EC2, ECS, Fargate)
 
