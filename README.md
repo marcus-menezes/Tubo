@@ -86,5 +86,5 @@ A definir
 </p>
 
 <p align="center">
-  <sub>Desenvolvido por <a href="https://github.com/your-username">Marcus Menezes</a></sub>
+  <sub>Desenvolvido por <a href="https://github.com/marcus-menezes">Marcus Menezes</a></sub>
 </p>
