@@ -4,13 +4,20 @@ Planejamento de desenvolvimento e entrega do MVP
 
 ## 📋 Estrutura do Projeto
 
-### Decisões Arquiteturais Pendentes
+### Decisões Arquiteturais
 
-- [ ] Definir estrutura: Monorepo vs Multi-repo
-- [ ] Escolher provedor de cloud (AWS / GCP / Azure)
-- [ ] Definir banco de dados principal
-- [ ] Definir estratégia de autenticação (JWT, OAuth, Firebase Auth)
-- [ ] Escolher serviço de storage para imagens/vídeos (S3, Cloudinary, Firebase Storage)
+**✅ Definidas:**
+- [x] Estrutura: **Monorepo**
+- [x] Cloud: **AWS (Amazon Web Services)**
+- [x] Banco de Dados: **PostgreSQL (AWS RDS)**
+- [x] Storage: **AWS S3** para imagens/vídeos
+- [x] Gerenciador de Pacotes: **Bun**
+- [x] CI/CD: **GitHub Actions**
+
+**⏳ Pendentes:**
+- [ ] Definir estratégia de autenticação (JWT, OAuth, AWS Cognito)
+- [ ] Escolher ORM (TypeORM, Prisma, Drizzle)
+- [ ] Definir estratégia de deploy (EC2, ECS, Fargate)
 
 ---
 
@@ -238,13 +245,14 @@ Planejamento de desenvolvimento e entrega do MVP
 ```
 - NestJS (Framework)
 - TypeScript
-- PostgreSQL (Dados relacionais) + MongoDB (Dados não-estruturados)
-- TypeORM / Prisma
+- Bun (runtime & package manager)
+- PostgreSQL (AWS RDS)
+- TypeORM / Prisma (ORM - a definir)
 - JWT Authentication
 - Socket.io (tempo real)
-- AWS S3 / Cloudinary (storage)
-- Redis (cache)
-- Jest (testes)
+- AWS S3 (storage de imagens/vídeos)
+- Redis (cache - pós-MVP)
+- Jest / Vitest (testes)
 ```
 
 ### Frontend Mobile
@@ -262,11 +270,16 @@ Planejamento de desenvolvimento e entrega do MVP
 
 ### Infraestrutura
 ```
-- Docker / Docker Compose
-- AWS / GCP (cloud)
+- Docker / Docker Compose (desenvolvimento)
+- AWS (cloud)
+  - RDS (PostgreSQL)
+  - S3 (storage)
+  - EC2 / ECS (compute)
+  - ElastiCache (Redis - futuro)
+  - CloudFront (CDN - futuro)
 - GitHub Actions (CI/CD)
 - Sentry (error tracking)
-- Google Analytics / Mixpanel
+- Google Analytics / Mixpanel (analytics)
 ```
 
 ---
