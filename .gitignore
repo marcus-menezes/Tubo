@@ -1,0 +1,96 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker volumes and data
+**/postgres_data/
+**/redis_data/
+**/pgadmin_data/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+mobile/build/
+mobile/.dart_tool/
+mobile/.packages
+mobile/pubspec.lock
+
+# iOS
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Flutter.framework
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Flutter/App.framework
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/ephemeral/
+mobile/ios/Flutter/flutter_export_environment.sh
+
+# Android
+mobile/android/.gradle
+mobile/android/captures/
+mobile/android/gradlew
+mobile/android/gradlew.bat
+mobile/android/local.properties
+mobile/android/.gradle/
+mobile/android/gradle/
+mobile/android/key.properties
+*.jks
+*.keystore
+
+# NestJS
+backend/dist/
+backend/node_modules/
+
+# Miscellaneous
+*.class
+*.lock
+*.pyc
+*.swp
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
