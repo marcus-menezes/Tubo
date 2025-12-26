@@ -1,6 +1,7 @@
 import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import getRedocMiddleware from "redoc-express";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
@@ -39,6 +40,7 @@ async function bootstrap() {
     .addTag("users", "Gerenciamento de usuários")
     .addTag("posts", "Posts e sessões de surf")
     .addTag("spots", "Spots e picos de surf")
+    .addTag("health", "Health checks e status")
     .addBearerAuth()
     .setContact(
       "Marcus Menezes",
@@ -50,17 +52,21 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
 
-  // Scalar UI (Moderna) 🔥
-  SwaggerModule.setup("docs", app, document, {
-    useGlobalPrefix: false,
-    customCssUrl:
-      "https://cdn.jsdelivr.net/npm/@scalar/api-reference@latest/dist/browser/scalar.css",
-    customJs:
-      "https://cdn.jsdelivr.net/npm/@scalar/api-reference@latest/dist/browser/standalone.js",
-    customSiteTitle: "Tubo API - Documentação",
+  // Redoc (UI Moderna e Limpa) 🔥
+  app.use(
+    "/docs",
+    getRedocMiddleware({
+      specUrl: "/swagger-json",
+      title: "Tubo API - Documentação",
+    })
+  );
+
+  // Swagger JSON endpoint (necessário para Redoc)
+  app.use("/swagger-json", (req, res) => {
+    res.json(document);
   });
 
-  // Swagger UI tradicional (fallback)
+  // Swagger UI (fallback/alternativa)
   SwaggerModule.setup("swagger", app, document, {
     useGlobalPrefix: false,
     customSiteTitle: "Tubo API - Swagger",
@@ -72,7 +78,7 @@ async function bootstrap() {
 
   console.log(`🚀 Tubo API rodando em http://localhost:${port}`);
   console.log(`📚 API Prefix: ${apiPrefix}`);
-  console.log(`📖 Docs (Scalar): http://localhost:${port}/docs`);
+  console.log(`📖 Docs (Redoc): http://localhost:${port}/docs 🔥`);
   console.log(`📖 Swagger UI: http://localhost:${port}/swagger`);
 }
 

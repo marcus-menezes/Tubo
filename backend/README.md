@@ -89,15 +89,17 @@ DATABASE_PASSWORD=tubo123
 
 A documentação da API está disponível em dois formatos:
 
-### Scalar (Moderna) 🔥
-Interface moderna e bonita com dark mode
+### Redoc (Moderna) 🔥
+Interface moderna, limpa e responsiva
 - **URL**: http://localhost:3000/docs
-- **Recomendado para desenvolvimento**
+- **Recomendado**: Visual clean, fácil de navegar
+- **Features**: Busca integrada, exemplos de código, navegação por tags
 
 ### Swagger UI (Tradicional)
-Interface clássica do Swagger
+Interface clássica do Swagger com cliente REST integrado
 - **URL**: http://localhost:3000/swagger
-- **Fallback e testes rápidos**
+- **Uso**: Testar endpoints diretamente
+- **Features**: Try it out, executar requests
 
 **Ambas usam a mesma especificação OpenAPI 3.0**
 
