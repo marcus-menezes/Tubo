@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: tubo-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: tubo_dev
+      POSTGRES_USER: tubo
+      POSTGRES_PASSWORD: tubo123
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tubo -d tubo_dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - tubo-network
+
+  # Redis Cache (opcional - para usar no futuro)
+  redis:
+    image: redis:7-alpine
+    container_name: tubo-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - tubo-network
+    profiles:
+      - full  # Só sobe se usar: docker-compose --profile full up
+
+  # pgAdmin (Interface web para PostgreSQL - opcional)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: tubo-pgadmin
+    restart: unless-stopped
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@tubo.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - tubo-network
+    profiles:
+      - tools  # Só sobe se usar: docker-compose --profile tools up
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  tubo-network:
+    driver: bridge
