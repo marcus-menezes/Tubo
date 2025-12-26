@@ -58,6 +58,32 @@ Este projeto também serve como uma jornada de aprendizado para transição de R
 - **Foco Local**: Pensado especificamente para o cenário e cultura do surf brasileiro
 - **Comunidade First**: Prioriza a conexão entre surfistas (social como Instagram/Facebook)
 - **Tracking & Gamificação**: Acompanhe suas estatísticas e evolução (inspirado no Strava)
+
+## �️ Desenvolvimento
+
+### Setup Local
+
+```bash
+# 1. Subir banco de dados
+docker-compose up -d
+
+# 2. Rodar backend
+cd backend
+bun install
+bun run start:dev
+
+# 3. Acessar
+# API: http://localhost:3000/api/v1
+# Docs: http://localhost:3000/docs
+```
+
+### Estrutura
+
+- [Roadmap do Projeto](ROADMAP.md) - Planejamento e fases do MVP
+- `backend/` - API NestJS
+- `mobile/` - App Flutter (a criar)
+- `database/` - Scripts e migrations
+- `devops/` - Configurações de infra
 - **Informação Útil**: Dados práticos sobre condições do mar e spots
 - **Visual Inspirador**: Interface que transmite a energia do surf
 
