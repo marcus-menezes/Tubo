@@ -35,6 +35,7 @@ tubo/
 
 - **Node.js** >= 18.x
 - **Bun** >= 1.0 (gerenciador de pacotes)
+- **Rancher Desktop** ou Docker Desktop (para containers)
 - **Flutter** >= 3.x
 - **Dart** >= 3.x
 
