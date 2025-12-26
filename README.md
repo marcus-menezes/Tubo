@@ -1,78 +1,90 @@
-# 🏄‍♂️ Tubo
+# 🏄‍♂️ Tubo - Monorepo
 
 **Rede social para surfistas brasileiros**
 
-## 📖 Sobre o Projeto
+*"Cada onda conta uma história"* 🌊
 
-Tubo é uma rede social dedicada à comunidade de surf brasileira, criando um ponto de encontro digital onde surfistas podem compartilhar suas sessões, descobrir novos picos, trocar ideias e conectar-se com outros praticantes do esporte.
+---
 
-O nome "Tubo" faz referência ao momento mais icônico do surf - quando o surfista está dentro da onda, completamente envolto pela água.
+## 📁 Estrutura do Projeto
 
-## 🎯 Conceito
+```
+tubo/
+├── backend/              # API NestJS + TypeScript
+├── mobile/               # App Flutter
+├── shared/               # Código compartilhado (types, constants)
+├── database/             # Scripts e configurações do banco
+│   ├── init/             # Scripts de inicialização do PostgreSQL
+│   ├── migrations/       # Migrações do banco (futuro)
+│   └── seeds/            # Dados de teste (futuro)
+├── devops/               # CI/CD e scripts de automação
+│   ├── github-actions/   # Workflows do GitHub Actions
+│   └── scripts/          # Scripts úteis
+├── docs/                 # Documentação do projeto
+│   ├── README.md         # Visão geral e conceito
+│   └── ROADMAP.md        # Planejamento e roadmap
+├── docker-compose.yml    # Serviços para desenvolvimento local
+├── .env.example          # Template de variáveis de ambiente
+├── .gitignore
+└── package.json          # Scripts do monorepo
+```
 
-Uma plataforma social focada em:
+## 🚀 Quick Start
 
-- **Compartilhamento de Sessions**: Registre suas sessões de surf com fotos, vídeos, condições do mar e spots
-- **Descoberta de Picos**: Explore e compartilhe informações sobre picos de surf pelo Brasil
-- **Comunidade Ativa**: Conecte-se com outros surfistas, siga amigos e descubra novos spots (estilo Instagram/Facebook)
-- **Gamificação**: Sistema de tracking e estatísticas pessoais inspirado no Strava para acompanhar sua evolução
-- **Informações em Tempo Real**: Condições do mar, previsões e alertas de swell
-- **Cultura do Surf**: Compartilhe histórias, dicas, equipamentos e tudo relacionado ao lifestyle do surf
+### Pré-requisitos
 
-## 🚀 Tecnologias
+- **Node.js** >= 18.x
+- **Bun** >= 1.0 (gerenciador de pacotes)
+- **Flutter** >= 3.x
+- **Dart** >= 3.x
 
-### Frontend Mobile
-- **Flutter**: Framework para desenvolvimento mobile multiplataforma
-- **Dart**: Linguagem de programação
+### Setup Inicial
 
-### Backend
-- **NestJS**: Framework Node.js para construção de APIs escaláveis
-- **TypeScript**: Linguagem fortemente tipada
+```bash
+# Clone o repositório
+git clone <repo-url>
+cdSubir banco de dados local (PostgreSQL)
+docker-compose up -d
 
-### Infraestrutura
-- **Cloud**: A definir (AWS, GCP, Azure)
-- **Banco de Dados**: A definir (PostgreSQL, MongoDB, Firebase)
-- **Arquitetura**: A definir (Monorepo vs Multi-repo)
+#  tubo
 
-## 🎓 Objetivo de Aprendizado
+# Instalar dependências root (quando houver)
+bun install
 
-Este projeto também serve como uma jornada de aprendizado para transição de React/React Native para Flutter, explorando:
-- Widgets e composição no Flutter
-- State management (Provider, Riverpod, Bloc)
-- Navegação e rotas
-- Integração com APIs REST
-- Design responsivo e animações
-- Build e deploy de apps Flutter
+# Setup backend
+cd backend
+bun install
+bun run start:dev
 
-## 👥 Público-Alvo
+# Setup mobile (em outro terminal)
+cd mobile
+flutter pub get
+flutter run
+```
 
-- Surfistas brasileiros de todos os níveis
-- Praticantes que buscam novos picos
-- Comunidade que quer compartilhar experiências
-- Viajantes em busca de spots de surf
+## 📚 Documentação
 
-## 🌊 Diferenciais
+- **[Documentação Completa](docs/README.md)** - Conceito, tecnologias e visão do projeto
+- **[Roadmap](docs/ROADMAP.md)** - Planejamento de desenvolvimento e MVP
 
-- **Foco Local**: Pensado especificamente para o cenário e cultura do surf brasileiro
-- **Comunidade First**: Prioriza a conexão entre surfistas (social como Instagram/Facebook)
-- **Tracking & Gamificação**: Acompanhe suas estatísticas e evolução (inspirado no Strava)
-- **Informação Útil**: Dados práticos sobre condições do mar e spots
-- **Visual Inspirador**: Interface que transmite a energia do surf
+## 🛠️ Tecnologias
 
-## 📱 Status do Projeto
+- **Backend**: NestJS, TypeScript, PostgreSQL/MongoDB
+- **Mobile**: Flutter, Dart
+- **Infraestrutura**: Docker, AWS/GCP (a definir)
 
-🚧 **Em Desenvolvimento Inicial** 🚧
+## 📦 Workspaces
 
-O projeto está em fase de concepção e planejamento. Consulte o [ROADMAP.md](ROADMAP.md) para ver o plano de desenvolvimento e funcionalidades previstas.
+Este é um monorepo simples. Cada pasta (`backend/`, `mobile/`) é independente mas compartilham o mesmo repositório Git.
+
+## 🎯 Status
+
+🚧 **Em Desenvolvimento Inicial** - Iniciado em 25/12/2025
 
 ## 📄 Licença
 
 A definir
 
-## 🤝 Contribuições
-
-Este é um projeto pessoal de aprendizado. Contribuições e sugestões são bem-vindas!
-
 ---
 
-*"Cada onda conta uma história"* 🌊
+Desenvolvido com ❤️ para a comunidade de surf brasileira
