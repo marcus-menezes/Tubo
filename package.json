@@ -1,0 +1,29 @@
+{
+  "name": "tubo-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tubo - Rede social para surfistas brasileiros",
+  "author": "Marcus Menezes <marcusmenezes2009@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "backend:install": "cd backend && bun install",
+    "backend:dev": "cd backend && bun run start:dev",
+    "backend:build": "cd backend && bun run build",
+    "backend:test": "cd backend && bun run test",
+    "mobile:install": "cd mobile && flutter pub get",
+    "mobile:run": "cd mobile && flutter run",
+    "mobile:build:android": "cd mobile && flutter build apk",
+    "mobile:build:ios": "cd mobile && flutter build ios",
+    "mobile:test": "cd mobile && flutter test",
+    "install:all": "bun run backend:install && bun run mobile:install",
+    "clean": "rm -rf backend/node_modules backend/dist mobile/build"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tubo"
+  }
+}
