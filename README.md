@@ -1,86 +1,79 @@
-# 🏄‍♂️ Tubo - Monorepo
+# 🏄‍♂️ Tubo
 
-**Rede social para surfistas brasileiros**
+> *"Cada onda conta uma história"*
 
-*"Cada onda conta uma história"* 🌊
+**A rede social para surfistas brasileiros.**
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🌊 Sobre o Projeto
 
-```
-tubo/
-├── backend/              # API NestJS + TypeScript
-├── mobile/               # App Flutter
-├── shared/               # Código compartilhado (types, constants)
-├── database/             # Scripts e configurações do banco
-│   ├── init/             # Scripts de inicialização do PostgreSQL
-│   ├── migrations/       # Migrações do banco (futuro)
-│   └── seeds/            # Dados de teste (futuro)
-├── devops/               # CI/CD e scripts de automação
-│   ├── github-actions/   # Workflows do GitHub Actions
-│   └── scripts/          # Scripts úteis
-├── docs/                 # Documentação do projeto
-│   ├── README.md         # Visão geral e conceito
-│   └── ROADMAP.md        # Planejamento e roadmap
-├── docker-compose.yml    # Serviços para desenvolvimento local
-├── .env.example          # Template de variáveis de ambiente
-├── .gitignore
-└── package.json          # Scripts do monorepo
-```
+O **Tubo** nasceu da ideia de criar um espaço digital onde surfistas brasileiros possam se conectar, compartilhar experiências e acompanhar sua evolução no esporte que amamos.
 
-## 🚀 Quick Start
+O nome faz referência ao momento mais icônico do surf - quando você está dentro da onda, completamente envolto pela água. É nesse espírito de imersão e conexão que o Tubo foi criado.
 
-### Pré-requisitos
+---
 
-- **Node.js** >= 18.x
-- **Bun** >= 1.0 (gerenciador de pacotes)
-- **Rancher Desktop** ou Docker Desktop (para containers)
-- **Flutter** >= 3.x
-- **Dart** >= 3.x
+## 💡 A Ideia
 
-### Setup Inicial
+Imagine um lugar onde você pode:
 
-```bash
-# Clone o repositório
-git clone <repo-url>
-cdSubir banco de dados local (PostgreSQL)
-docker-compose up -d
+### 📸 Compartilhar Suas Sessões
+Registre cada sessão de surf com fotos, vídeos e detalhes das condições. Conte para a galera como foi aquele dia épico em que você pegou as melhores ondas da sua vida.
 
-#  tubo
+### 🗺️ Descobrir Novos Picos
+Explore spots de surf por todo o Brasil. Veja fotos, leia avaliações da comunidade e encontre seu próximo destino de surf. Do Nordeste ao Sul, conectamos você aos melhores picos.
 
-# Instalar dependências root (quando houver)
-bun install
+### 📊 Acompanhar Sua Evolução
+Como um "Strava do surf", acompanhe suas estatísticas: quantas sessões você fez esse mês, quais seus spots favoritos, seu progresso ao longo do tempo. Defina metas e conquiste badges.
 
-# Setup backend
-cd backend
-bun install
-bun run start:dev
+### 🤝 Conectar com a Comunidade
+Siga outros surfistas, curta posts, comente sessões e construa sua rede. Encontre companheiros de surfe, descubra eventos e faça parte de uma comunidade ativa.
 
-# Setup mobile (em outro terminal)
-cd mobile
-flutter pub get
-flutter run
-```
+---
 
-## 📚 Documentação
+## 🎯 Para Quem é o Tubo?
 
-- **[Documentação Completa](docs/README.md)** - Conceito, tecnologias e visão do projeto
-- **[Roadmap](docs/ROADMAP.md)** - Planejamento de desenvolvimento e MVP
+- **Surfistas de todos os níveis** - Do iniciante ao profissional
+- **Quem busca novos picos** - Viajantes e exploradores
+- **Amantes do lifestyle do surf** - Compartilhe a cultura, dicas e equipamentos
+- **Comunidade brasileira** - Feito especialmente para o cenário nacional
 
-## 🛠️ Tecnologias
+---
 
-- **Backend**: NestJS, TypeScript, PostgreSQL/MongoDB
-- **Mobile**: Flutter, Dart
-- **Infraestrutura**: Docker, AWS/GCP (a definir)
+## ✨ Diferenciais
 
-## 📦 Workspaces
+**🇧🇷 Foco no Brasil** - Pensado para o cenário, cultura e spots brasileiros
 
-Este é um monorepo simples. Cada pasta (`backend/`, `mobile/`) é independente mas compartilham o mesmo repositório Git.
+**🤝 Comunidade em Primeiro Lugar** - Conexões reais entre surfistas
 
-## 🎯 Status
+**📈 Gamificação** - Acompanhe seu progresso e evolução
 
-🚧 **Em Desenvolvimento Inicial** - Iniciado em 25/12/2025
+**🌊 Informações Úteis** - Condições do mar, previsões e dados práticos
+
+---
+
+## 🚀 Status
+
+🚧 **Em desenvolvimento inicial** - Projeto iniciado em 25 de dezembro de 2025
+
+Este é um projeto de aprendizado pessoal, combinando paixão pelo surf com desenvolvimento de software. O objetivo é criar uma plataforma completa que realmente agregue valor à comunidade de surf brasileira.
+
+---
+
+## 📚 Quer Saber Mais?
+
+- **[Documentação Completa](docs/README.md)** - Detalhes técnicos, arquitetura e conceitos
+- **[Roadmap do Projeto](docs/ROADMAP.md)** - Planejamento, funcionalidades e cronograma
+- **[Como Contribuir](docs/README.md#contribuindo)** - Guia para desenvolvedores
+
+---
+
+## 🤝 Feedback e Sugestões
+
+Este projeto está em fase inicial e todo feedback é valioso! Se você é surfista, desenvolvedor ou simplesmente se interessou pela ideia, sua opinião é importante.
+
+---
 
 ## 📄 Licença
 
@@ -88,4 +81,10 @@ A definir
 
 ---
 
-Desenvolvido com ❤️ para a comunidade de surf brasileira
+<p align="center">
+  <strong>Feito com ❤️ e 🏄‍♂️ para a comunidade de surf brasileira</strong>
+</p>
+
+<p align="center">
+  <sub>Desenvolvido por <a href="https://github.com/your-username">Marcus Menezes</a></sub>
+</p>
