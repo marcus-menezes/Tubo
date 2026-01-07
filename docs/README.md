@@ -22,14 +22,17 @@ Uma plataforma social focada em:
 ## 🚀 Tecnologias
 
 ### Frontend Mobile
+
 - **Flutter**: Framework para desenvolvimento mobile multiplataforma
 - **Dart**: Linguagem de programação
 
 ### Backend
+
 - **NestJS**: Framework Node.js para construção de APIs escaláveis
 - **TypeScript**: Linguagem fortemente tipada
 
 ### Infraestrutura
+
 - **Cloud**: AWS (Amazon Web Services)
 - **Banco de Dados**: PostgreSQL (AWS RDS)
 - **Cache**: Redis (AWS ElastiCache) - Pós-MVP
@@ -39,6 +42,7 @@ Uma plataforma social focada em:
 ## 🎓 Objetivo de Aprendizado
 
 Este projeto também serve como uma jornada de aprendizado para transição de React/React Native para Flutter, explorando:
+
 - Widgets e composição no Flutter
 - State management (Provider, Riverpod, Bloc)
 - Navegação e rotas
@@ -103,4 +107,4 @@ Este é um projeto pessoal de aprendizado. Contribuições e sugestões são bem
 
 ---
 
-*"Cada onda conta uma história"* 🌊
+_"Cada onda conta uma história"_ 🌊
