@@ -10,7 +10,7 @@
 			"name": "Health",
 			"item": [
 				{
-					"name": "Health Check",
+					"name": "Health Check 2",
 					"id": "15888120-32627e61-3bbf-41fd-be55-ac86cf359b72",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
