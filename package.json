@@ -16,7 +16,16 @@
     "mobile:build:ios": "cd mobile && flutter build ios",
     "mobile:test": "cd mobile && flutter test",
     "install:all": "bun run backend:install && bun run mobile:install",
-    "clean": "rm -rf backend/node_modules backend/dist mobile/build"
+    "clean": "rm -rf backend/node_modules backend/dist mobile/build",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11"
   },
   "engines": {
     "node": ">=18.0.0",
