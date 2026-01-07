@@ -54,6 +54,43 @@ Tubo/
 └── docs/             # Documentação técnica
 ```
 
+## 📝 Convenções de Documentação
+
+**IMPORTANTE**: Toda documentação técnica deve ser criada dentro da pasta `docs/` na raiz do monorepo.
+
+### Regras de Documentação
+
+1. **Centralização**: Toda documentação vai em `docs/` (exceto READMEs específicos de módulos)
+2. **Nomenclatura**: Use UPPERCASE para docs principais (ex: `SETUP.md`, `ENVIRONMENT.md`)
+3. **Estrutura**:
+   ```
+   docs/
+   ├── README.md          # Índice central da documentação
+   ├── SETUP.md           # Guia de instalação
+   ├── ENVIRONMENT.md     # Variáveis de ambiente
+   ├── ROADMAP.md         # Planejamento
+   └── [FEATURE].md       # Documentação de features
+   ```
+
+4. **Não criar na raiz**: Documentos como `BIOME.md`, `ENV_GUIDE.md`, etc. devem ir para `docs/`
+5. **Exceções permitidas**:
+   - `README.md` na raiz do projeto (visão geral)
+   - `README.md` dentro de módulos (ex: `backend/src/modules/auth/README.md`)
+   - `backend/README.md`, `mobile/README.md` (específicos de cada projeto)
+
+### Exemplos
+
+✅ **Correto**:
+- `docs/SETUP.md` - Guia de setup
+- `docs/DEPLOYMENT.md` - Deploy
+- `docs/API_DESIGN.md` - Design de API
+- `backend/src/modules/users/README.md` - Doc do módulo users
+
+❌ **Evitar**:
+- `BIOME.md` na raiz (mover para `docs/BIOME.md`)
+- `ENV_GUIDE.md` na raiz (mover para `docs/ENVIRONMENT.md`)
+- Múltiplos arquivos de doc espalhados pela raiz
+
 ## 🎨 Convenções de Código
 
 ### Backend (NestJS)
@@ -78,10 +115,10 @@ src/modules/<nome>/
 
 #### Biome (Linter/Formatter)
 ```bash
-# Rodar linting e formatação
+# Rodar linting e formatação (da raiz do monorepo)
 bun run check:fix
 
-# Configuração em backend/biome.json
+# Configuração centralizada em biome.json na raiz
 ```
 
 **Regras principais**:
