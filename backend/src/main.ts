@@ -81,6 +81,7 @@ async function bootstrap() {
   console.log(`📚 API Prefix: ${apiPrefix}`);
   console.log(`📖 Docs (Redoc): http://localhost:${port}/docs 🔥`);
   console.log(`📖 Swagger UI: http://localhost:${port}/swagger`);
+  console.log(`🏥 Health Check: http://localhost:${port}/${apiPrefix}/health`);
 }
 
 bootstrap();
