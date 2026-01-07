@@ -53,25 +53,46 @@ Siga outros surfistas, curta posts, comente sessões e construa sua rede. Encont
 
 ---
 
-## 🚀 Status
+## 🚀 Status do Projeto
 
 🚧 **Em desenvolvimento inicial** - Projeto iniciado em 25 de dezembro de 2025
 
 Este é um projeto de aprendizado pessoal, combinando paixão pelo surf com desenvolvimento de software. O objetivo é criar uma plataforma completa que realmente agregue valor à comunidade de surf brasileira.
 
----
-
-## 📚 Quer Saber Mais?
-
-- **[Documentação Completa](docs/README.md)** - Detalhes técnicos, arquitetura e conceitos
-- **[Roadmap do Projeto](docs/ROADMAP.md)** - Planejamento, funcionalidades e cronograma
-- **[Como Contribuir](docs/README.md#contribuindo)** - Guia para desenvolvedores
+**Meta MVP**: Maio de 2026
 
 ---
 
-## 🤝 Feedback e Sugestões
+## 🛠️ Stack Tecnológica
 
-Este projeto está em fase inicial e todo feedback é valioso! Se você é surfista, desenvolvedor ou simplesmente se interessou pela ideia, sua opinião é importante.
+- **Backend**: NestJS 11 + TypeScript + PostgreSQL
+- **Mobile**: Flutter (em breve)
+- **Infraestrutura**: Docker + PostgreSQL + Redis
+
+---
+
+## 📚 Documentação
+
+### Para Desenvolvedores
+
+- **[Guia de Setup](docs/SETUP.md)** - Como configurar o ambiente de desenvolvimento
+- **[Variáveis de Ambiente](docs/ENVIRONMENT.md)** - Configuração completa de .env
+- **[Arquitetura Técnica](docs/README.md)** - Visão geral técnica e estrutura do projeto
+- **[Roadmap do MVP](docs/ROADMAP.md)** - Planejamento de fases e funcionalidades
+
+### Por Módulo
+
+- **[Backend API](backend/README.md)** - Comandos, estrutura e convenções
+- **[Database](database/README.md)** - Scripts SQL e migrations
+- **[DevOps](devops/README.md)** - Infraestrutura e deployment
+
+---
+
+## 🤝 Contribuindo
+
+Interessado em contribuir? Veja a [documentação técnica](docs/README.md) para entender a arquitetura do projeto.
+
+**Feedback e sugestões são sempre bem-vindos!** Se você é surfista, desenvolvedor ou simplesmente se interessou pela ideia, sua opinião é importante.
 
 ---
 
