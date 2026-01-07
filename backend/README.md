@@ -15,8 +15,10 @@ API REST construída com NestJS, TypeScript e PostgreSQL.
 # Instalar dependências
 bun install
 
-# Copiar .env (se não foi copiado)
-cp ../.env.example .env
+# Copiar .env (IMPORTANTE: copiar do backend, não da raiz!)
+cp .env.example .env
+
+# Edite o .env e troque o JWT_SECRET!
 
 # Subir banco de dados (na raiz do projeto)
 cd ..
@@ -105,7 +107,23 @@ Interface clássica do Swagger com cliente REST integrado
 
 ## 🔐 Variáveis de Ambiente
 
-Ver `.env.example` na raiz do projeto para todas as variáveis disponíveis.
+O backend possui seu próprio `.env`. Copie de `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+### Variáveis Obrigatórias
+- `DATABASE_*` - Configuração do PostgreSQL
+- `JWT_SECRET` - **DEVE ser alterado em produção!**
+- `PORT` - Porta do servidor (padrão: 3000)
+
+### Variáveis Opcionais (Futuras)
+- `AWS_*` - Uploads S3
+- `REDIS_*` - Cache
+- `SMTP_*` - Email
+
+**Nota**: A raiz do projeto tem um `.env` separado apenas para Docker Compose.
 
 ## 🧪 Testes
 
